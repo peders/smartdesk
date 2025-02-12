@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="bm-no">
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="data.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <title>Peders SmartDesk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <section id="main">
+      <h1>Peders SmartDesk</h1>
+      <p>Mål: Vise hvordan innhold kan kan tilbys brukeren innhold fra starten av, og hele veien. Altså uten tomme forsider med bare én knapp, og lignende.</p>
+      <section id="filterList">
+        <button onclick="renderReset()" type="button" id="filterReset" class="selected">Alle fag</button>
+      </section>
+      <section id="cardList"></section>
+    </section>
+    <script type="text/javascript" src="render.js"></script>
+  </body>
+</html>

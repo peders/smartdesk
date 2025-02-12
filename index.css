@@ -1,0 +1,78 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section#main {
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin: 0 0 1em 0.5em;
+}
+
+section#filterList, section#cardList {
+    border-radius: 1.1em;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+section#filterList {
+    background: #e1e1e1;
+}
+
+section#cardList {
+    background: #ebf0f8;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 12em);
+    grid-auto-rows: 10em;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    padding: 0 0 1em 0;
+}
+
+li {
+    border-radius: 1.1em;
+    background: #f8f8f8;
+    padding: 0;
+    align-content: end;
+    font-weight: normal;
+    position: relative;
+}
+
+#cardList li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.1em 1.1em 0 0;
+}
+
+#cardList li span {
+    display: block;
+    padding: 1em;
+}
+
+li:hover {
+    background: white;
+    box-shadow: 0 0 0.5em #bbb;
+}
+
+button {
+    display: inline-block;
+    background: black;
+    color: white;
+    border: none;
+    margin: 0 1em 0 0;
+    line-height: 2.2em;
+    border-radius: 1.1em;
+    padding: 0 2em;
+}
+
+button:hover, button.selected {
+    background: rgb(27, 101, 197);
+}
