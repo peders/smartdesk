@@ -18,19 +18,17 @@
         margin: 0 0 1em 0.5em;
     }
 
-    #filterList,
-    #cardList {
-        border-radius: 1.1em;
-        padding: 1em;
-        margin-bottom: 2em;
-    }
-
     #filterList {
+        border-radius: 1.1em 1.1em 0 0;
+        padding: 1em;
         background: #e1e1e1;
     }
 
     #cardList {
+        border-radius: 0 0 1.1em 1.1em;
+        padding: 1em;
         background: #ebf0f8;
+        margin-bottom: 2em;
     }
 
     ul {
