@@ -202,7 +202,7 @@ const cards = [
         title: 'Utro brøk',
         topic: 'Matematikk',
         subtopic: 'Brøk',
-        instruction: 'Hvis brøken har slemme tanker, kan de hende den er utro.'
+        instruction: 'Hvis brøken har slemme tanker, kan det hende den er utro.'
     },
     {
         title: 'Bråk - brøk på svensk',
