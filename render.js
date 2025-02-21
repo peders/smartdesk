@@ -70,7 +70,7 @@ function showContentPane(title, topic, subtopic, instruction) {
             mask.parentElement.removeChild(mask);
         }
     };
-    document.body.appendChild(mask);
+    document.getElementById("main").appendChild(mask);
 }
 
 function resetView() {

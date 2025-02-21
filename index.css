@@ -12,18 +12,18 @@ h2 {
     margin: 0 0 1em 0.5em;
 }
 
-section#filterList,
-section#cardList {
+#filterList,
+#cardList {
     border-radius: 1.1em;
     padding: 1em;
     margin-bottom: 2em;
 }
 
-section#filterList {
+#filterList {
     background: #e1e1e1;
 }
 
-section#cardList {
+#cardList {
     background: #ebf0f8;
 }
 
