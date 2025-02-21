@@ -12,7 +12,8 @@ h2 {
     margin: 0 0 1em 0.5em;
 }
 
-section#filterList, section#cardList {
+section#filterList,
+section#cardList {
     border-radius: 1.1em;
     padding: 1em;
     margin-bottom: 2em;
@@ -60,6 +61,7 @@ li {
 li:hover {
     background: white;
     box-shadow: 0 0 0.5em #bbb;
+    cursor: pointer;
 }
 
 button {
@@ -73,6 +75,61 @@ button {
     padding: 0 2em;
 }
 
-button:hover, button.selected {
+button:hover,
+button.selected {
     background: rgb(27, 101, 197);
+    cursor: pointer;
+}
+
+#modalmask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(0.5em);
+}
+
+#modalcontent {
+    position: relative;
+    width: 48.625em;
+    margin: 10em auto;
+    background: white;
+    border-radius: 1.1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 1);
+    padding: 0;
+    min-height: 48.625em;
+}
+
+#modalcontent img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.1em 1.1em 0 0;
+}
+
+#modalcontent h3 {
+    position: absolute;
+    left: 0.5em;
+    top: 10.5em;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#modalcontent p.breadcrumb {
+    position: absolute;
+    left: 1.25em;
+    top: 24.5em;
+    font-size: 1em;
+    color: #808080;
+    margin: 0;
+}
+
+#modalcontent p.exercise {
+    position: absolute;
+    left: 1.25em;
+    top: 31em;
+    font-size: 1em;
+    margin: 0;
 }

@@ -3,6 +3,7 @@ const cards = [
         title: "Lek med verb",
         topic: "Norsk",
         subtopic: "Grammatikk",
+        instruction: 'Finn fem verb i en bok.'
     },
     {
         title: "Lek med substantiver",
@@ -13,6 +14,7 @@ const cards = [
         title: "Lek med adjektiver",
         topic: "Norsk",
         subtopic: "Grammatikk",
+        instruction: 'Lag en adjektivfortelling i klassen.'
     },
     {
         title: "Lek med determinativ",
