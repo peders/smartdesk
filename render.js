@@ -1,33 +1,49 @@
 function renderTopicCards(value, key, map) {
+    const div = document.createElement("div");
+    div.classList = 'cardrow';
     const h2 = document.createElement("h2");
     h2.textContent = key;
     const ul = document.createElement("ul");
-    //    value.toSorted((a, b) => 0.5 - Math.random()).slice(0, 5).forEach((member) => {
-    value.slice(0, 5).forEach((member) => {
-        const li = document.createElement("li");
-        const img = document.createElement("img");
-        img.setAttribute('src', 'https://picsum.photos/seed/' + encodeURIComponent(member.topic + member.subtopic + member.title) + '/192/90');
-        img.setAttribute('alt', 'Oppgave: ' + member.title);
-        li.appendChild(img);
-        const legend = document.createElement("span");
-        legend.textContent = member.title;
-        li.appendChild(legend);
-        li.onclick = function () { showContentPane(member.title, member.topic, member.subtopic, member.instruction) };
-        ul.appendChild(li);
+    value.toSorted((a, b) => 0.5 - Math.random()).slice(0, 5).forEach((member) => {
+        //    value.slice(0, 5).forEach((member) => {
+        renderCard(member, ul)
     });
-    document.getElementById("cardList").appendChild(h2);
-    document.getElementById("cardList").appendChild(ul);
+    div.appendChild(h2);
+    div.appendChild(ul);
+    document.getElementById("cardList").appendChild(div);
+}
+
+function renderCard(card, parentList) {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    img.setAttribute('src', 'https://picsum.photos/seed/' + encodeURIComponent(card.topic + card.subtopic + card.title) + '/192/90');
+    img.setAttribute('alt', 'Oppgave: ' + card.title);
+    li.appendChild(img);
+    const legend = document.createElement("span");
+    legend.textContent = card.title;
+    li.appendChild(legend);
+    li.onclick = function () { showContentPane(card.title, card.topic, card.subtopic, card.instruction) };
+    parentList.appendChild(li);
 }
 
 function renderReset() {
     resetView();
+    const div = document.createElement("div");
+    div.classList = 'cardrow recent';
+    const h2 = document.createElement("h2");
+    h2.textContent = 'Siste';
+    div.appendChild(h2);
+    const ul = document.createElement("ul");
+    cards.filter((c) => c.isrecent).forEach((c) => renderCard(c, ul));
+    div.appendChild(ul);
+    document.getElementById("cardList").appendChild(div);
     Map.groupBy(cards, (c) => c.topic).forEach(renderTopicCards);
     document.getElementById('filterReset').className = 'selected';
 }
 
 function renderFiltered(filter) {
     resetView();
-    Map.groupBy(cards.filter((c) => c.topic == filter), ({ subtopic }) => subtopic).forEach(renderTopicCards);
+    Map.groupBy(cards.filter((c) => c.topic == filter), ((c) => c.subtopic)).forEach(renderTopicCards);
     document.getElementById('filter' + filter).className = 'selected';
 }
 
@@ -66,7 +82,6 @@ function showContentPane(title, topic, subtopic, instruction) {
     }
     mask.appendChild(content);
     mask.onclick = function (event) {
-        console.log(event.target);
         if (event.target == document.getElementById("modalmask")) {
             mask.parentElement.removeChild(mask);
         }
