@@ -2,7 +2,8 @@ function renderTopicCards(value, key, map) {
     const h2 = document.createElement("h2");
     h2.textContent = key;
     const ul = document.createElement("ul");
-    value.toSorted((a, b) => 0.5 - Math.random()).slice(0, 5).forEach((member) => {
+    //    value.toSorted((a, b) => 0.5 - Math.random()).slice(0, 5).forEach((member) => {
+    value.slice(0, 5).forEach((member) => {
         const li = document.createElement("li");
         const img = document.createElement("img");
         img.setAttribute('src', 'https://picsum.photos/seed/' + encodeURIComponent(member.topic + member.subtopic + member.title) + '/192/90');

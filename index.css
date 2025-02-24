@@ -1,139 +1,141 @@
 * {
     font-family: Roboto;
 
-    section#main {
-        max-width: 65em;
-        margin: 0 auto;
-    }
+}
 
-    h1 {
-        font-size: 2.5em;
-        font-weight: 300;
-        margin: 1em 0 0.5em 0;
-    }
+section#main {
+    max-width: 65em;
+    margin: 0 auto;
+}
 
-    h2 {
-        font-size: 1.25em;
-        font-weight: 300;
-        margin: 0 0 1em 0.5em;
-    }
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 1em 0 0.5em 0;
+}
 
-    #filterList {
-        border-radius: 1.1em 1.1em 0 0;
-        padding: 1em;
-        background: #e1e1e1;
-    }
+h2 {
+    font-size: 1.25em;
+    font-weight: 300;
+    margin: 0 0 1em 0.5em;
+}
 
-    #cardList {
-        border-radius: 0 0 1.1em 1.1em;
-        padding: 1em;
-        background: #ebf0f8;
-        margin-bottom: 2em;
-    }
+#filterList {
+    border-radius: 1.1em 1.1em 0 0;
+    padding: 1em;
+    background: #e1e1e1;
+}
 
-    ul {
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: repeat(5, 12em);
-        grid-auto-rows: 10em;
-        column-gap: 0.5em;
-        row-gap: 0.5em;
-        padding: 0 0 1em 0;
-    }
+#cardList {
+    border-radius: 0 0 1.1em 1.1em;
+    padding: 1em;
+    background: #ebf0f8;
+    margin-bottom: 2em;
+}
 
-    li {
-        border-radius: 1.1em;
-        background: #f8f8f8;
-        padding: 0;
-        align-content: end;
-        font-weight: normal;
-        position: relative;
-    }
+ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(5, 12em);
+    grid-auto-rows: 10em;
+    column-gap: 0.5em;
+    row-gap: 0.5em;
+    padding: 0 0 1em 0;
+}
 
-    #cardList li img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 1.1em 1.1em 0 0;
-    }
+li {
+    border-radius: 1.1em;
+    background: #f8f8f8;
+    padding: 0;
+    align-content: end;
+    font-weight: normal;
+    position: relative;
+}
 
-    #cardList li span {
-        display: block;
-        padding: 1em;
-    }
+#cardList li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.1em 1.1em 0 0;
+}
 
-    li:hover {
-        background: white;
-        box-shadow: 0 0 0.5em #bbb;
-        cursor: pointer;
-    }
+#cardList li span {
+    display: block;
+    padding: 1em;
+}
 
-    button {
-        display: inline-block;
-        background: black;
-        color: white;
-        border: none;
-        margin: 0 1em 0 0;
-        line-height: 2.2em;
-        border-radius: 1.1em;
-        padding: 0 1.25em;
-    }
+li:hover {
+    background: white;
+    box-shadow: 0 0 0.5em #bbb;
+    cursor: pointer;
+}
 
-    button:hover,
-    button.selected {
-        background: rgb(27, 101, 197);
-        cursor: pointer;
-    }
+button {
+    display: inline-block;
+    background: black;
+    color: white;
+    border: none;
+    margin: 0 1em 0 0;
+    line-height: 2.2em;
+    border-radius: 1.1em;
+    padding: 0 1.25em;
+}
 
-    #modalmask {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        backdrop-filter: blur(0.5em) saturate(25%) brightness(0.5);
-    }
+button:hover,
+button.selected {
+    background: rgb(27, 101, 197);
+    cursor: pointer;
+}
 
-    #modalcontent {
-        position: relative;
-        width: 48.625em;
-        margin: 2em auto;
-        background: white;
-        border-radius: 1.1em;
-        box-shadow: 0 0 1em rgba(0, 0, 0, 1);
-        padding: 0;
-        min-height: 45em;
-    }
+#modalmask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(0.5em) saturate(25%) brightness(0.5);
+}
 
-    #modalcontent img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 1.1em 1.1em 0 0;
-    }
+#modalcontent {
+    position: relative;
+    width: 48.625em;
+    margin: 2em auto;
+    background: white;
+    border-radius: 1.1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 1);
+    padding: 0;
+    min-height: 45em;
+}
 
-    #modalcontent h3 {
-        position: absolute;
-        left: 0.5em;
-        top: 10.5em;
-        font-size: 2.5em;
-        font-weight: 300;
-        margin: 0;
-    }
+#modalcontent img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.1em 1.1em 0 0;
+}
 
-    #modalcontent p.breadcrumb {
-        position: absolute;
-        left: 1.25em;
-        top: 24.5em;
-        font-size: 1em;
-        color: #808080;
-        margin: 0;
-    }
+#modalcontent h3 {
+    position: absolute;
+    left: 0.5em;
+    top: 10.5em;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 0;
+}
 
-    #modalcontent p.exercise {
-        position: absolute;
-        left: 1.25em;
-        top: 31em;
-        font-size: 1em;
-        margin: 0;
-    }
+#modalcontent p.breadcrumb {
+    position: absolute;
+    left: 1.25em;
+    top: 24.5em;
+    font-size: 1em;
+    color: #808080;
+    margin: 0;
+}
+
+#modalcontent p.exercise {
+    position: absolute;
+    left: 1.25em;
+    top: 31em;
+    font-size: 1em;
+    margin: 0;
+}
