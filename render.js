@@ -19,7 +19,12 @@ function renderCard(card, parentList) {
     img.setAttribute('src', 'https://picsum.photos/seed/' + encodeURIComponent(card.topic + card.subtopic + card.title) + '/192/90');
     img.setAttribute('alt', 'Oppgave: ' + card.title);
     li.appendChild(img);
+    const crumb = document.createElement("span");
+    crumb.classList = 'breadcrumb';
+    crumb.textContent = card.topic + ' > '+ card.subtopic;
+    li.appendChild(crumb);
     const legend = document.createElement("span");
+    legend.classList = 'title';
     legend.textContent = card.title;
     li.appendChild(legend);
     li.onclick = function () { showContentPane(card.title, card.topic, card.subtopic, card.instruction) };

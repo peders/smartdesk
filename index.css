@@ -4,7 +4,7 @@
 }
 
 section#main {
-    max-width: 65em;
+    max-width: 66em;
     margin: 0 auto;
 }
 
@@ -43,9 +43,9 @@ ul {
     list-style-type: none;
     display: grid;
     grid-template-columns: repeat(5, 12em);
-    grid-auto-rows: 10em;
-    column-gap: 0.5em;
-    row-gap: 0.5em;
+    grid-auto-rows: 11em;
+    column-gap: 1em;
+    row-gap: 1em;
     padding: 0 0 1em 0;
 }
 
@@ -71,7 +71,20 @@ li {
 
 #cardList li span {
     display: block;
-    padding: 1em;
+    position: absolute;
+}
+
+#cardList li .breadcrumb {
+    top: 8.75em;
+    padding: 0 1.25em;
+    font-size: 0.75em;
+    color: #999999;
+}
+
+#cardList li .title {
+    top: 7.75em;
+    padding: 0 0.9375em;
+    font-weight: 500;
 }
 
 li:hover {
@@ -138,7 +151,7 @@ button.selected {
     left: 1.25em;
     top: 24.5em;
     font-size: 1em;
-    color: #808080;
+    color: #999999;
     margin: 0;
 }
 
