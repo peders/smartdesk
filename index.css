@@ -23,7 +23,7 @@ h2 {
 #filterList {
     border-radius: 1.1em 1.1em 0 0;
     padding: 1em;
-    background: #e1e1e1;
+    background: #d1d1d1;
 }
 
 #cardList {
@@ -36,7 +36,7 @@ h2 {
 }
 
 #cardList .cardrow.recent {
-    background: #edf8eb;
+    background: #d5e0f8;
 }
 
 ul {
