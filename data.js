@@ -324,7 +324,7 @@ const cards = [
     instruction: "Les mer på 1881.no",
   },
   {
-    title: "Quix\z om verb",
+    title: "Quiz om verb",
     source: "",
     isrecent: false,
     topic: "Norsk",
